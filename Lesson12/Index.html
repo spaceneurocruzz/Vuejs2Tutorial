@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson12- Looping with v-for</title>
+		<link href="styles.css" rel="stylesheet"/>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+
+	<body>
+		<div id="vue-app">
+			<h1>Looping with v-for</h1>
+			<ul>
+				<li v-for="(character, index) in characters">
+					{{index}} . {{character}}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="(skywalker,index) in skywalkers">
+					<h3>{{index}} . {{skywalker.name}}</h3>
+					<p>{{skywalker.age}}</p>
+				</li>
+			</ul>
+			<h2>Using template</h2>
+			<template v-for="(skywalker,index) in skywalkers">
+				<h3>{{index}} . {{skywalker.name}}</h3>
+				<p>{{skywalker.age}}</p>
+			</template>
+			<template v-for = "skywalker in skywalkers">
+				<div v-for="(val,key) in skywalker">
+					<p>{{key}} - {{val}}</p>
+				</div>
+			</template>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
