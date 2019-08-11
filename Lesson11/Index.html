@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson11- Conditionals</title>
+		<link href="styles.css" rel="stylesheet"/>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+
+	<body>
+		<div id="vue-app">
+			<h1>Conditionals</h1>
+			<button v-on:click="error = !error">Toggle error</button>
+			<button v-on:click="success = !success">Toggle success</button>
+			<!-- <p v-if="error">There has been an error</p>
+			<p v-else-if="success">Success!!</p> -->
+			<p v-show="error">There has been an error</p>
+			<p v-show="success">Success!!</p>  
+			<!-- show: style: none -->
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
