@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson16- Refs</title>
+		<link href="styles.css" rel="stylesheet"/>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+
+	<body>
+		<h1>Refs</h1>
+		<div id="vue-app">
+			<h2>Refs</h2>
+			<input type="text" ref="input"/>
+			<button v-on:click="readRefs">Submit</button>
+			<p>Your favorite food: {{output}}</p>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
